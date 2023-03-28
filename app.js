@@ -10,6 +10,12 @@ createApp({
       linkVue:"https://vuejs.org/",
       linkButton:"Visit Vue.js.org",
       white: "white",
+      show: false,
     };
+  },
+  methods: {
+    toggleBtn() {
+      this.show = !this.show
+    }
   }
 }).mount("#app");

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
   <title>First Ex vue.js</title>
   <style>
@@ -31,9 +32,19 @@
       max-width: 28em;
     }
 
-    .white{
+    .white {
       color: white;
-      text-shadow:0 0 30px #121314;
+      text-shadow: 0 0 30px #121314;
+    }
+
+    i {
+      font-size: 30px;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+    i:hover {
+      cursor: pointer;
     }
     
   </style>
@@ -43,10 +54,12 @@
   <div id="app">
     <div v-bind:class="white">
       <h1>{{message}}</h1>
-      <p style="font-weight: 500; font-size: 2.2em;">{{presentation}}</p>
-      <p>{{explanation}}</p>
-      <p>{{details}}</p>
-      <a style="text-decoration: none;  color: inherit; font-size: 22px;" v-bind:href="linkVue">{{linkButton}}</a>
+      <i v-on:click="toggleBtn" class="fa-solid fa-chevron-down white"></i>
+      <p v-if="show" :class="show" style="font-weight: 500; font-size: 2.2em;">{{presentation}}</p>
+      <p v-if="show" :class="show">{{explanation}}</p>
+      <p v-if="show" :class="show">{{details}}</p>
+      <a v-if="show" :class="show" style="text-decoration: none;  color: inherit; font-size: 22px;"
+        v-bind:href="linkVue">{{linkButton}}</a>
     </div>
   </div>
 
