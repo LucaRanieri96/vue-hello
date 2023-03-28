@@ -47,6 +47,16 @@
     i:hover {
       cursor: pointer;
     }
+
+    .v-enter-active,
+    .v-leave-active {
+      transition: opacity 0.5s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+      opacity: 0;
+    }
   </style>
 </head>
 
@@ -55,11 +65,19 @@
     <div v-bind:class="white">
       <h1>{{message}}</h1>
       <i v-on:click="toggleBtn" class="fa-solid fa-chevron-down white"></i>
-      <p v-if="show" style="font-weight: 500; font-size: 2.2em;">{{presentation}}</p>
-      <p v-if="show">{{explanation}}</p>
-      <p v-if="show">{{details}}</p>
-      <a v-if="show" style="text-decoration: none;  color: inherit; font-size: 22px;"
-        v-bind:href="linkVue">{{linkButton}}</a>
+      <Transition>
+        <p v-if="show" style="font-weight: 500; font-size: 2.2em;">{{presentation}}</p>
+      </Transition>
+      <Transition>
+        <p v-if="show">{{explanation}}</p>
+      </Transition>
+      <Transition>
+        <p v-if="show">{{details}}</p>
+      </Transition>
+      <Transition>
+        <a v-if="show" style="text-decoration: none;  color: inherit; font-size: 22px;"
+          v-bind:href="linkVue">{{linkButton}}</a>
+      </Transition>
     </div>
   </div>
 
