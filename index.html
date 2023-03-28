@@ -14,6 +14,8 @@
       font-size: calc(10px + 0.33vw);
       padding: 5vh 10vw;
       color: #121314;
+      background-image: url("./bg-img/wp5502431-gradient-4k-wallpapers.jpg");
+
     }
 
     h1 {
@@ -29,16 +31,17 @@
       max-width: 28em;
     }
 
-    .image {
-      background-repeat: no-repeat;
+    .white{
+      color: white;
+      text-shadow:0 0 30px #121314;
     }
-
+    
   </style>
 </head>
 
-<body id="app" :style="image" class="image">
-  <div>
-    <div>
+<body>
+  <div id="app">
+    <div v-bind:class="white">
       <h1>{{message}}</h1>
       <p style="font-weight: 500; font-size: 2.2em;">{{presentation}}</p>
       <p>{{explanation}}</p>

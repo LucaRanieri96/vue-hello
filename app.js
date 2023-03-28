@@ -9,7 +9,7 @@ createApp({
       details:"Vue.js is an open-source model-view-viewmodel front end JavaScript framework for building user interfaces and single-page applications",
       linkVue:"https://vuejs.org/",
       linkButton:"Visit Vue.js.org",
-      image:{backgroundImage: "url(./bg-img/wp5502431-gradient-4k-wallpapers.jpg)"}
+      white: "white",
     };
-  },
+  }
 }).mount("#app");
