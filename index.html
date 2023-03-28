@@ -57,6 +57,23 @@
     .v-leave-to {
       opacity: 0;
     }
+
+    .dog {
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+    }
+
+    .dog2 {
+      height: 160px;
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+    }
+
+
+
   </style>
 </head>
 
@@ -78,9 +95,11 @@
         <a v-if="show" style="text-decoration: none;  color: inherit; font-size: 22px;"
           v-bind:href="linkVue">{{linkButton}}</a>
       </Transition>
+      <img class="dog" v-if="hide" :src="tobyfoxsleep" v-on:mouseover="toggleDog">
+      <img class="dog2" v-if="showdog" :src="tobyfox">
+
     </div>
   </div>
-
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="app.js"></script>

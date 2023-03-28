@@ -11,11 +11,19 @@ createApp({
       linkButton:"Visit Vue.js.org",
       white: "white",
       show: false,
+      tobyfoxsleep: "./bg-img/tobyfoxsleep.gif",
+      tobyfox: "./bg-img/tobyfox.gif",
+      hide: true,
+      showdog: false,
     };
   },
   methods: {
     toggleBtn() {
       this.show = !this.show
+    },
+    toggleDog(){
+      this.hide = !this.hide
+      this.showdog = !this.showdog
     }
   }
 }).mount("#app");
