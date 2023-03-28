@@ -61,16 +61,20 @@
 
     .dog {
       height: 100px;
+      width: 220px;
       position: absolute;
       bottom: 0;
       right: 30px;
+      z-index: 1;
     }
 
     .dog2 {
       height: 160px;
+      width: 220px;
       position: absolute;
       bottom: 0;
       right: 30px;
+      z-index: 2;
     }
 
 
@@ -97,7 +101,7 @@
           v-bind:href="linkVue">{{linkButton}}</a>
       </Transition>
       <img class="dog" v-if="hide" :src="tobyfoxsleep" v-on:mouseover="toggleDog">
-      <img class="dog2" v-if="showdog" :src="tobyfox">
+      <img class="dog2" v-if="showdog" v-on:mouseleave="toggleDog" :src="tobyfox">
 
     </div>
   </div>
