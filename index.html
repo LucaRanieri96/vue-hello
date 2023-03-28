@@ -55,10 +55,10 @@
     <div v-bind:class="white">
       <h1>{{message}}</h1>
       <i v-on:click="toggleBtn" class="fa-solid fa-chevron-down white"></i>
-      <p v-if="show" :class="show" style="font-weight: 500; font-size: 2.2em;">{{presentation}}</p>
-      <p v-if="show" :class="show">{{explanation}}</p>
-      <p v-if="show" :class="show">{{details}}</p>
-      <a v-if="show" :class="show" style="text-decoration: none;  color: inherit; font-size: 22px;"
+      <p v-if="show" style="font-weight: 500; font-size: 2.2em;">{{presentation}}</p>
+      <p v-if="show">{{explanation}}</p>
+      <p v-if="show">{{details}}</p>
+      <a v-if="show" style="text-decoration: none;  color: inherit; font-size: 22px;"
         v-bind:href="linkVue">{{linkButton}}</a>
     </div>
   </div>
